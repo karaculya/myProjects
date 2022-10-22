@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    //1
+
     public static String[] readArray() throws Exception {
         BufferedReader reader1 = new BufferedReader(new FileReader("text.txt"));
         int line = Integer.parseInt(reader1.readLine());
@@ -15,13 +15,13 @@ public class Main {
                 }
         return array;
     }
-    //2
+
     public static int binarySearch(String[] array, String s){
         Arrays.sort(array);
         int index = Arrays.binarySearch(array, s);
         return index;
     }
-    //3
+
     public static int countElements(String[] array, String s){
         int count = 1;
                 if (Arrays.binarySearch(array, s) >=0)
@@ -30,7 +30,7 @@ public class Main {
                     count = -1;
         return count;
     }
-    //4
+
     public static String[] removeElement(String[] array, int index){
         int n = array.length;
         if (index < 0 || index >= n)
@@ -43,7 +43,7 @@ public class Main {
         }
         return temp;
     }
-    //4'
+
     public static void deleteElement(String[] array, int index){
         int n = array.length;
         String[] temp = new String[n-1];
@@ -54,7 +54,7 @@ public class Main {
             array[index] = "deleted";
         }
     }
-    //5
+
     public static String[] addElement(String[] array, String s){
         int n = array.length;
         String[] newArray = new String[n+1];
@@ -63,7 +63,7 @@ public class Main {
         newArray[n] = s;
         return newArray;
     }
-    //5'
+
     public static void appendElement(String[] array, String s){
         int n = array.length;
         String[] temp = new String[n];
@@ -71,11 +71,11 @@ public class Main {
             temp[i] = array[i];
         array[n-1] = s;
     }
-    //6
+
     public static void getArray(String[] array){
         System.out.println(Arrays.toString(array));
     }
-    //7
+
     public static void saveFile(String[] array) throws Exception {
         BufferedWriter writer = new BufferedWriter(new FileWriter("vegetables.txt"));
         writer.write(array.length + "\r\n");
